@@ -1,0 +1,31 @@
+.footer-section{
+    background-color: #212529;
+    margin-top:50px;
+}
+.logo-section ,.feature,.contact,.aboutUs{
+    color:white;
+}
+
+.footer-menu{
+    cursor: pointer;
+}
+.social-icon{
+    font-size: 30px;
+   
+}
+.single-icon{
+    margin:0px 7px 0px 7px;
+    cursor: pointer;
+}
+.facebook{
+    color:#1877F2;
+}
+.twitter{
+    color:#1DA1F2;
+}
+.instagram{
+    color:#E4405F;
+}
+.blog {
+    color: rgb(201, 196, 196);
+}
