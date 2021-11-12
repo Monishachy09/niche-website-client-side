@@ -16,13 +16,11 @@ const NavBar = () => {
 <Navbar.Collapse className="justify-content-end pe-3 ">
 <Nav.Link as={HashLink} className="text-white" to="/home">Home</Nav.Link>
   <Nav.Link as={HashLink} className="text-white" to="/services#service">Section</Nav.Link>
-  <Nav.Link as={HashLink} className="text-white" to="/dashboard">Dashboard</Nav.Link>
+  
   <Nav.Link as={HashLink} className="text-white" to="/login">Admin</Nav.Link> 
   <Nav.Link as={HashLink} className="text-white" to="/contact">Contact Us</Nav.Link>
   <NavDropdown title="Dropdown"  id="basic-nav-dropdown">
-  <NavDropdown.Item href="#action/3.1">Add Section</NavDropdown.Item>
-  <NavDropdown.Item href="#action/3.2">Edit Package</NavDropdown.Item>
-  <NavDropdown.Item href="/manageProduct">ManageProduct</NavDropdown.Item>
+  <Nav.Link as={HashLink} className="text-dark" to="/dashboard">Dashboard</Nav.Link>
   <NavDropdown.Divider />  
   <NavDropdown.Item >Logout</NavDropdown.Item>
         </NavDropdown>
@@ -32,6 +30,7 @@ const NavBar = () => {
 
 </Container>
 </Navbar>
+
     </div>
     );
 };

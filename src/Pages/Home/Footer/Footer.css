@@ -11,6 +11,8 @@
 }
 .social-icon{
     font-size: 30px;
+    align-items: center;
+    justify-content: center;
    
 }
 .single-icon{
@@ -18,6 +20,12 @@
     cursor: pointer;
 }
 .facebook{
+    color:#1877F2;
+}
+.linkDin{
+    color:#1DA1F2;
+}
+.google{
     color:#1877F2;
 }
 .twitter{
