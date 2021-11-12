@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const ManageProduct = () => {
+const ManageOrder = () => {
 
     const category = [
         {
@@ -30,7 +29,7 @@ const ManageProduct = () => {
 
             <div className=" mt-3">
                 <div className="d-flex">
-                    <h2>Manage Products</h2>
+                    <h2>Manage Orders</h2>
                 </div>
                 <table className="table border shadow mt-3">
                     <thead className="thead-dark bg-dark" style={{ color: 'white' }} >
@@ -52,10 +51,16 @@ const ManageProduct = () => {
                                     <td>{pd.category}</td>
                                     <td>{pd.code}</td>
                                     <td>{pd.price}</td>
-                                    <td>                                 
-                                    <Link to="!#" className="btn btn-outline-primary me-2 ">Edit</Link>
-                                    <Link to="!#" className="btn btn-danger me-2" >Delete</Link>
-                                </td>
+                                    <td className="d-flex">
+                                        
+                                    <select class="form-select me-2" style={{maxWidth:'110px'}} >
+                                                <option selected>status</option>
+                                                <option value="1">Done</option>
+                                                <option value="2">Pending</option>
+                                                
+                                            </select>
+                                        {/* <Link to="!#" className="btn btn-danger me-2" >Delete</Link> */}
+                                    </td>
                                 </tr>
                             ))
                         }
@@ -68,4 +73,4 @@ const ManageProduct = () => {
     );
 };
 
-export default ManageProduct;
+export default ManageOrder;

@@ -13,10 +13,10 @@ const Reviews = () => {
             "img": "https://i.ibb.co/bP2h94Q/as.png"
         },
         {
-            "name": "Jon Do",
+            "name": "Enjo Den",
             "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, quam! Dicta eveniet ",
             "info": "customer",
-            "img": "https://i.ibb.co/bP2h94Q/as.png"
+            "img": "https://i.ibb.co/1TgCLCC/Background-7-removebg-preview.png"
         },
         {
             "name": "Jon Do",
@@ -25,10 +25,10 @@ const Reviews = () => {
             "img": "https://i.ibb.co/bP2h94Q/as.png"
         },
         {
-            "name": "Jon Do",
+            "name": "Enjo Den",
             "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, quam! Dicta eveniet ",
             "info": "customer",
-            "img": "https://i.ibb.co/bP2h94Q/as.png"
+            "img": "https://i.ibb.co/1TgCLCC/Background-7-removebg-preview.png"
         },
         {
             "name": "Jon Do",
@@ -37,10 +37,10 @@ const Reviews = () => {
             "img": "https://i.ibb.co/bP2h94Q/as.png"
         },
         {
-            "name": "Jon Do",
+            "name": "Enjo Den",
             "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, quam! Dicta eveniet ",
             "info": "customer",
-            "img": "https://i.ibb.co/bP2h94Q/as.png"
+            "img": "https://i.ibb.co/1TgCLCC/Background-7-removebg-preview.png"
         },
         {
             "name": "Jon Do",
@@ -71,7 +71,7 @@ const Reviews = () => {
             <div className="row ">
                 <div className="text-center mb-4">                                      
                     <div className="text-center mt-5 mb-3">
-                    <h1>We love our clients</h1>
+                    <h1 className="text-danger">We love our clients</h1>
                     <p className="fst-italic color-fruit">The best testimonials</p>
                 </div>
                 </div>

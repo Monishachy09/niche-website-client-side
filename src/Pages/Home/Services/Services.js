@@ -13,7 +13,9 @@ const Services = () => {
     return (
         <div className="container">
         <div className="row">
-            <h1>Amazing Spring</h1>
+            <div className="text-danger mb-3">
+            <h1>Buy your Dream car</h1>
+            </div>
             <hr className="mt-3 hr-style" />
             {
                 service.slice(0, 6).map((item, index) => {

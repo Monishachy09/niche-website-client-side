@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from '../NavBar/NavBar';
 import './Contact.css';
 
 
@@ -12,6 +13,8 @@ const appointmentBanner = {
 
 const Contact = () => {
     return (
+        
+       <>
         <section style={appointmentBanner}>
             <div className="pt-5">
             <h1>Get in <span className="contact-head ">touch with us</span></h1>
@@ -50,6 +53,7 @@ const Contact = () => {
         </div>
         {/* </section> */}
         </section>
+       </>
     );
 };
 

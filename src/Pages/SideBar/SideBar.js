@@ -1,135 +1,95 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch
-  } from "react-router-dom";
+import { useRouteMatch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo2.png';
-import addAdmin from '../DashBoard/addAdmin/addAdmin';
-import manageProduct from '../DashBoard/manageProduct/manageProduct';
-import myOrder from '../DashBoard/MyOrder/myOrder';
 import './SideBar.css';
 
 const SideBar = () => {
-    let { path, url } = useRouteMatch();
-    return (
-        <div class="menubar">
+
+  let { url } = useRouteMatch();
+
+  return (
+    <>
+    <div class="menubar">
         <input type="checkbox" id="btn" hidden />
-        <label for="btn" class="menu-btn">
-          <i className="fas fa-bars"></i>
-          <i className="fas fa-times"></i>
+        <label for="btn" className="menu-btn">
+            <i className="fas fa-bars"></i>
+            <i className="fas fa-times"></i>
         </label>
-        <nav id="sidebar">
-          <div class="sidebar_logo">
-          <img className="ps-3 img-fluid" src={logo} alt="" />
-          </div>
-          <div className="sidebarWrapper">
-            <div className="sidebarMenu">
-              <ul class="sidebarList">
-                <div className="dropdown-container">
-                  <Link  to={`${url}`}  style={{textDecoration:'none'}} > <li className="sidebarListItem active">
-                    <i className="fas fa-border-all"></i>
-                    My Order
-                  </li></Link>
-  
-                </div>
-                  <div className="dropdown-container">
-                    <Link to={`${url}/addProduct`} style={{textDecoration:'none'}} ><li className="sidebarListItem"><i className="fas fa-cart-plus"></i> Add Product</li></Link>
-                </div>
-                  <div className="dropdown-container">
-                    <Link to={`${url}/addAdmin`} style={{textDecoration:'none'}} ><li className="sidebarListItem"><i className="fas fa-user-friends"></i> Add Admin</li></Link>
-                </div>
-                <div className="dropdown-container">
-                  <li className="sidebarListItem">
-                    <i className="far fa-clone"></i>
-                    Categories
-                  </li>
-                  <div className="dropdown-content">
-                    <Link to="/addCategory" style={{textDecoration:'none'}} ><li className="sidebarListItem">Add Category</li></Link>
-                    <Link to="/listCategory" style={{textDecoration:'none'}} ><li className="sidebarListItem">List Category</li></Link>
-  
-                  </div>
-                </div>
-                <div className="dropdown-container">
-                  <li className="sidebarListItem">
-                    <i className="far fa-clock"></i>
-                    Sale
-                  </li>
-                  <div className="dropdown-content">
-                    <Link to="addSale" style={{textDecoration:'none'}} > <li className="sidebarListItem">Add Sale</li></Link>
-                    <Link to="listSale" style={{textDecoration:'none'}} > <li className="sidebarListItem">List Sale</li></Link>
-  
-                  </div>
-                </div>
-                <div className="dropdown-container">
-                  <li className="sidebarListItem">
-                    <i className="fas fa-qrcode"></i>
-                    <Link to="/addImei" style={{textDecoration:'none',color:'#595555',marginTop:'-10px'}} ><li className="sidebarListItem">Add IMEI</li></Link>
-                    
-                  </li>
-                 
-                </div>
-                <div className="dropdown-container">
-                  <li className="sidebarListItem">
-                    <i className="fas fa-sort-amount-down"></i>
-                    Returns
-                  </li>
-                  <div className="dropdown-content">
-                   <Link to="/addReturns" style={{textDecoration:'none'}} > <li className="sidebarListItem">Add Returns</li></Link>
-                   <Link to="/listReturns" style={{textDecoration:'none'}} > <li className="sidebarListItem">List Returns</li></Link>
-                   
-                  </div>
-                </div>
-                <div className="dropdown-container">
-                  <li className="sidebarListItem">
-                    <i className="fas fa-user-friends"></i>
-                    People
-                  </li>
-                  <div className="dropdown-content">
-                    <li className="sidebarListItem">  Add Customers</li>
-                    <li className="sidebarListItem" >List Customers</li>
-                    <li className="sidebarListItem" >Add Users</li>
-                    <li className="sidebarListItem" >List Users</li>
-                  </div>
-                </div>
-                <div className="dropdown-container">
-                  <li className="sidebarListItem">
-                    <i className="fas fa-file-alt"></i>
-                    Reports
-                  </li>
-                </div>
-  
-              </ul>
+       
+       <nav id="sidebar">
+            <div className="sidebar_logo">
+                <img src={logo} alt="" className="img-fluid" />
             </div>
-          </div>
-        </nav>
-        <div className="logo">
-          <h2>logo here</h2>
-        </div>
-        
-        <div class="profile">
-          {/* <li><a href="#"><i className="far fa-user-circle"></i></a></li> */}
-         
-        </div>
-        <Switch>
-        <Route exact path={path}>
-          <myOrder/>
-        </Route>
-        <Route path={`${path}/addProduct`}>
-            <manageProduct/>
-        </Route>
-        <Route path={`${path}/addAdmin`}>
-            <addAdmin/>
-        </Route>
-      </Switch>
-      </div>
+            <div className="sidebarWrapper">
+                <div className="sidebarMenu">
+                    <ul className="sidebarList">
+                        <div className="dropdown-container">
+                            <Link to={`${url}/myOrder`} style={{ textDecoration: 'none',color:'#000' }} > <li className="sidebarListItem active">
+                            <i className="fas fa-shopping-bag color-fruit"></i>
+                                My Order
+                            </li></Link>
 
-        
+                        </div>
+                        <div className="dropdown-container">
+                            <Link to={`${url}/review`} style={{ textDecoration: 'none',color:'#000' }} > <li className="sidebarListItem ">
+                            <i className="fas fa-comments color-fruit"></i>
+                                Review
+                            </li></Link>
 
-
-    );
+                        </div>
+                        <div className="dropdown-container">
+                            <Link to={`${url}/pay`} style={{ textDecoration: 'none',color:'#000' }} > <li className="sidebarListItem ">
+                            <i className="fas fa-money-bill-alt color-fruit"></i>
+                                Pay
+                            </li></Link>
+                        </div>
+                        <div className="dropdown-container">
+                            <Link to={`${url}/manageOrder`} style={{ textDecoration: 'none',color:'#000' }} > <li className="sidebarListItem ">
+                            <i class="fas fa-border-none color-fruit"></i>
+                                Manage Orders
+                            </li></Link>
+                        </div>
+                        <div className="dropdown-container">
+                            <Link to={`${url}/addProduct`} style={{ textDecoration: 'none',color:'#000' }} > <li className="sidebarListItem ">
+                            <i class="fab fa-product-hunt color-fruit"></i>
+                               Add Product
+                            </li></Link>
+                        </div>
+                        <div className="dropdown-container">
+                            <Link to={`${url}/makeAdmin`} style={{ textDecoration: 'none',color:'#000' }} > <li className="sidebarListItem ">
+                            <i class="fas fa-user-friends color-fruit"></i>
+                               Make Admin
+                            </li></Link>
+                        </div>
+                        <div className="dropdown-container">
+                            <Link to={`${url}/manageProduct`} style={{ textDecoration: 'none',color:'#000' }} > <li className="sidebarListItem ">
+                            <i class="fas fa-border-all color-fruit"></i>
+                               Manage Product
+                            </li></Link>
+                        </div>
+                      
+                      <div className="d-flex " style={{marginTop:'100%'}}>
+                         
+                     <Link  to="/login" >  <i  className="fas fa-sign-out-alt color-fruit fs-15"></i></Link>
+                     <Link to="/home" className="ms-auto"> <i className="fas fa-home color-fruit  fs-15"></i></Link>
+                          </div> 
+                                                                                     
+                       
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>   
+          
+       {/* <div className="wrapper">
+       <RouteDiv/> 
+           </div>        */}
+                                     
+    </div>
+    
+</>
+  );
 };
 
 export default SideBar;
