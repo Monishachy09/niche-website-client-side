@@ -21,7 +21,7 @@ const SideBar = () => {
         })
             .then(res => res.json())
             .then(data => setIsAdmin(data));
-    }, [])
+    }, [currentUser.email])
 
     return (
         <>

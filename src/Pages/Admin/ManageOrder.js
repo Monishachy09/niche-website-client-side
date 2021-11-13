@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const ManageOrder = () => {
 
@@ -13,11 +12,11 @@ const ManageOrder = () => {
     },[])
 
     return (
-        <div className="admin-section">
+        <div className="container">
 
             <div className=" mt-3">
                 <div className="d-flex">
-                    <h2>Manage Orders</h2>
+                    <h2 className="fst-italic">Manage Orders</h2>
                 </div>
                 <table className="table border shadow mt-3">
                     <thead className="thead-dark bg-dark" style={{ color: 'white' }} >

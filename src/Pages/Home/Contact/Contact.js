@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from '../NavBar/NavBar';
 import './Contact.css';
 
 

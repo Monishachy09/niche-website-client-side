@@ -26,11 +26,11 @@ const ManageProduct = () => {
         }
 
     return (
-        <div className="admin-section">
+        <div className="container">
 
             <div className=" mt-3">
                 <div className="d-flex">
-                    <h2>Manage Products</h2>
+                    <h2 className="fst-italic">Manage Products</h2>
                 </div>
                 <table className="table border shadow mt-3">
                     <thead className="thead-dark bg-dark" style={{ color: 'white' }} >

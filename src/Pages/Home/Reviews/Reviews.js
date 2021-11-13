@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ReactOwlCarousel from 'react-owl-carousel';
@@ -13,20 +12,20 @@ const Reviews = () => {
         .then(data=> setTestimonial(data))
     },[])
 
-    const options = {
-        responsiveClass: true,
-        nav: false,
-        dots: false,
-        autoplay: true,
-        smartSpeed: 2000,
-        loop: true,
-        responsive: {
-            1: { items: 1 },
-            550: { items: 2 },
-            786: { items: 3 },
-            1200: { items: 3 }
-        }
-    };
+    // const options = {
+    //     responsiveClass: true,
+    //     nav: false,
+    //     dots: false,
+    //     autoplay: true,
+    //     smartSpeed: 2000,
+    //     loop: true,
+    //     responsive: {
+    //         1: { items: 1 },
+    //         550: { items: 2 },
+    //         786: { items: 3 },
+    //         1200: { items: 3 }
+    //     }
+    // };
 
 
     return (
@@ -38,7 +37,7 @@ const Reviews = () => {
                     <p className="fst-italic">The best Reviews</p>
                 </div>
                 </div>
-                <ReactOwlCarousel className='owl-theme'  {...options}>
+                {/* <ReactOwlCarousel className='owl-theme'  {...options}>
                     {
                         testimonial.map((review, index) => {
                             return (
@@ -55,7 +54,26 @@ const Reviews = () => {
                             )
                         })
                     }
-                </ReactOwlCarousel>
+                </ReactOwlCarousel> */}
+
+{
+                        testimonial.map((rev, index) => {
+                            return (
+                                <div key={index} className="d-flex col-md-4 justify-content-around">
+                                    <div key={index} className="card  " style={{ width: '22rem' }}>
+                                        <img src={rev.imageURL} className=" bg-gray img-fluid" alt="..." style={{width:'100%',height:'150px'}} />
+                                        <div className="card-body ">
+                                            <h6>{rev.name}</h6>
+                                            <p className="card-text">{rev.comment}</p>
+                                            <h6 className="card-title">{rev.identity}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+
+
             </div>
         </section>
     );

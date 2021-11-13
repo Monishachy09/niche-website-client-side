@@ -21,7 +21,7 @@ const NavBar = () => {
                         <Nav.Link as={HashLink} className="text-white" to="/home">Home</Nav.Link>
                         <Nav.Link as={HashLink} className="text-white" to="/explore">Explore</Nav.Link>
 
-                        <Nav.Link as={HashLink} className="text-white" to="/login">Admin</Nav.Link>
+                        <Nav.Link as={HashLink} className="text-white" to="#brand">Brands</Nav.Link>
                         <Nav.Link as={HashLink} className="text-white" to="#contact">Contact Us</Nav.Link>
                         {currentUser ? (
                                 <NavDropdown title={<span className="text-white">{currentUser.displayName}</span>} id="basic-nav-dropdown">                                                                                             

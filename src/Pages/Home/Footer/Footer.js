@@ -16,7 +16,7 @@ const Footer = () => {
                        <h6><i className="fas fa-map-marker-alt"></i> Address: Sylhet-Bangladesh</h6>
                         <h6><i className="fas fa-phone-square-alt"></i> Phone: 018468353</h6>
                         <h6><i className="fas fa-blender-phone"></i> Phone: +(800) 12-4567</h6>
-                        <h6><i className="fas fa-mail-bulk"></i> Email: info@gastrology.com</h6>
+                        <h6><i className="fas fa-mail-bulk"></i> Email: info@auto-car.com</h6>
                        </div>
                           
                 </div>
@@ -27,9 +27,9 @@ const Footer = () => {
                         <div className="footer-menu">
                         <ul className="text-white">
                             <li><Link className="text-white text-decoration-none" to="/home">Home</Link></li>
-                            <li><Link className="text-white text-decoration-none" to="/services">Services</Link></li>
-                            <li><Link className="text-white text-decoration-none" to="/conditions">Conditions</Link></li>
-                            <li><Link className="text-white text-decoration-none" to="/aboutUs">About Us</Link></li>
+                            <li><Link className="text-white text-decoration-none" to="/explore">Explore</Link></li>
+                            <li><Link className="text-white text-decoration-none" to="">Review</Link></li>
+                            <li><Link className="text-white text-decoration-none" to="/aboutUs">Contact Us</Link></li>
                         </ul>
                         </div>
                           

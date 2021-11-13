@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Switch, useRouteMatch } from "react-router-dom";
 import SideBar from '../../SideBar/SideBar';
 import ManageProduct from '../../Admin/ManageProduct';
 import MyOrder from '../userOrder/MyOrder';
@@ -25,7 +25,7 @@ const DashBoard = () => {
         })
             .then(res => res.json())
             .then(data => setIsAdmin(data));
-    }, [])
+    }, [currentUser.email])
 
 
 

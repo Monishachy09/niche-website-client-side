@@ -18,7 +18,7 @@ const MyOrder = () => {
         })
             .then(res => res.json())
             .then(data => setOrders(data))
-    }, [])
+    }, [ currentUser.email ])
 
     const deleteItem = id => {
         fetch(`http://localhost:5000/cancelItem/${id}`, {

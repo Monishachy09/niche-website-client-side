@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 
 const MakeAdmin = () => {
 
-    const { register, reset, handleSubmit, watch,  formState: { errors } } = useForm();
+    const { register, reset, handleSubmit,  formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
         const adminData = {

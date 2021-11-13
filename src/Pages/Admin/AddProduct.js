@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 
 const AddProduct = () => {
 
-    const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, reset, handleSubmit, formState: { errors } } = useForm();
     const [imageURL, setImageURL] = useState(null);
 
     const onSubmit = data => {

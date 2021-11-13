@@ -2,7 +2,7 @@ import React from 'react';
 
 const Brands = () => {
     return (
-        <div className="full-row pb-0 mb-5 mt-5">
+        <div id="brand" className="full-row pb-0 mb-5 mt-5">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 mb-4">
