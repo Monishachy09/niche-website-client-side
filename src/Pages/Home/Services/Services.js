@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import ServiceData from '../../../AllData/ServiceData.json';
 import './Services.css';
 
 const Services = () => {
+
     const [service, setService] = useState([]);
+    
     useEffect(() => {
-        setService(ServiceData);
-    }, [])
+        fetch('http://localhost:5000/products')
+        .then(res => res.json())
+        .then(data => setService(data.reverse()))       
+    },[])
 
     return (
         <div className="container">
@@ -26,13 +29,13 @@ const Services = () => {
                                     
                                     <div className="text-center">
                                            
-                                               <Card.Img variant="top" src={item.img} style={{width:'250px',height:'200px'}}/>
+                                               <Card.Img variant="top" src={item.imageURL} style={{width:'250px',height:'200px'}}/>
                                            
                                            </div>
                                       
                                         <Card.Body className="text-center">
                                         <h5>{item.name}</h5>
-                                            <span> {item.description} </span>
+                                            <span> {item.shortDis} </span>
                                             <p><span className="price">${item.price}</span> /MRP</p>
                                             <span>
                                                 <i className="rate fas fa-star"></i>
@@ -42,7 +45,7 @@ const Services = () => {
                                                 <i className="rate fas fa-star"></i>
                                                  ({item.rate}) </span>
                                         </Card.Body>
-                                        <Link to={`/purchase/${item.id}`}className="nav-link text-secondary"> <button  className="btn btn-info">buy Now</button> </Link>
+                                        <Link to={`/purchase/${item._id}`}className="nav-link text-secondary"> <button  className="btn btn-info">Buy Now</button> </Link>
                                     </Card>
         </div>
                     )

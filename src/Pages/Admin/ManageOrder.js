@@ -1,28 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ManageOrder = () => {
 
-    const category = [
-        {
-            name: "chips",
-            category: "potetu chaips",
-            code: "1245876",
-            price: "432",
-        },
-        {
-            name: "chips",
-            category: "potetu chaips",
-            code: "1245876",
-            price: "432",
-        },
-        {
-            name: "chips",
-            category: "potetu chaips",
-            code: "1245876",
-            price: "432",
-        }
-    ]
-
+     
+    const [allOrder, setAllOrder] = useState([]);
+      
+    useEffect(() => {
+        fetch('http://localhost:5000/allOrder')
+        .then(res => res.json())
+        .then(data => setAllOrder(data.reverse()))       
+    },[])
 
     return (
         <div className="admin-section">
@@ -35,22 +23,23 @@ const ManageOrder = () => {
                     <thead className="thead-dark bg-dark" style={{ color: 'white' }} >
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col"> Name</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">code</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">city</th>
                             <th scope="col">price</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            category.slice(0, 5).map((pd, index) => (
+                            allOrder.map((pd, index) => (
                                 <tr>
                                     <th scope="row">{index + 1}</th>
-                                    <td>{pd.name}</td>
-                                    <td>{pd.category}</td>
-                                    <td>{pd.code}</td>
-                                    <td>{pd.price}</td>
+                                    
+                                    <td>{pd.productName}</td>
+                                    <td>{pd.email}</td>
+                                    <td>{pd.city}</td>
+                                    <td>${pd.productPrice}</td>
                                     <td className="d-flex">
                                         
                                     <select class="form-select me-2" style={{maxWidth:'110px'}} >

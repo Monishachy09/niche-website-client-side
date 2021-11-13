@@ -15,7 +15,7 @@ const Contact = () => {
     return (
         
        <>
-        <section style={appointmentBanner}>
+        <section id="contact" style={appointmentBanner}>
             <div className="pt-5">
             <h1>Get in <span className="contact-head ">touch with us</span></h1>
             <h4>let us know your opinion by contacting us.</h4>

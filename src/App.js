@@ -10,6 +10,7 @@ import DashBoard from './Pages/DashBoard/DashBoard/DashBoard';
 import SingleService from './Pages/SingleServices/SingleService';
 import AuthProvider from './Pages/Contexts/AuthProvider';
 import PrivateRoute from '../src/Pages/Login/PrivateRoute/PrivateRoute';
+import Explore from './Pages/explore/Explore';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/services"><Services/></Route>
           <Route path="/contact"><Contact/></Route>
           <PrivateRoute path="/dashboard"><DashBoard/></PrivateRoute>
+          <PrivateRoute path="/explore"><Explore/></PrivateRoute>
           <PrivateRoute path="/purchase/:Id"><SingleService/></PrivateRoute>
           <Route path="/login"><Login/></Route>
           <Route path="/signUp"><Signup/></Route>
