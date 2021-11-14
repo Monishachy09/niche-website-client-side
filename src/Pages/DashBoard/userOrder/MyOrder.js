@@ -11,7 +11,7 @@ const MyOrder = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://lit-waters-88932.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: currentUser.email })
@@ -21,7 +21,7 @@ const MyOrder = () => {
     }, [ currentUser.email ])
 
     const deleteItem = id => {
-        fetch(`http://localhost:5000/cancelItem/${id}`, {
+        fetch(`https://lit-waters-88932.herokuapp.com/cancelItem/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -21,7 +21,7 @@ const AddProduct = () => {
         alert('New product added');
         reset();
 
-        const url = `http://localhost:5000/addProduct`
+        const url = `https://lit-waters-88932.herokuapp.com/addProduct`
         console.log(addProducts)
         fetch(url, {
             method: 'POST',

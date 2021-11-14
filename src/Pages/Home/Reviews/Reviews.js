@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import ReactOwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import ReactOwlCarousel from 'react-owl-carousel';
 
 const Reviews = () => {
 
     const [ testimonial, setTestimonial]= useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allReview')
+        fetch('https://lit-waters-88932.herokuapp.com/allReview')
         .then(res=> res.json())
         .then(data=> setTestimonial(data))
     },[])
